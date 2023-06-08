@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import ThemeToggler from "./ThemeToggler";
 import menuData from "./menuData";
 
-const Header = () => {
+const Header = ({ scrollToSection }: { scrollToSection: (sectionId: string) => void }) => {
   // Navbar toggle
   const [navbarOpen, setNavbarOpen] = useState(false);
   const navbarToggleHandler = () => {
@@ -103,14 +103,15 @@ const Header = () => {
                 >
                   <ul className="block lg:flex lg:space-x-12">
                     {menuData.map((menuItem, index) => (
-                      <li key={menuItem.id} className="group relative">
+                      <li key={menuItem.id}  className="group relative">
                         {menuItem.path ? (
-                          <Link
-                            href={menuItem.path}
-                            className={`flex py-2 text-base text-dark group-hover:opacity-70 dark:text-white lg:mr-0 lg:inline-flex lg:py-6 lg:px-0`}
+                          <a
+                            onClick={() => scrollToSection(menuItem.sectionId)}
+                            style={{ fontWeight: 'bold', fontSize: '18px', fontFamily: 'Arial' }}
+                            className="cursor-pointer hover:text-blue-500"
                           >
                             {menuItem.title}
-                          </Link>
+                          </a>
                         ) : (
                           <>
                             <a

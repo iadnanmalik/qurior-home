@@ -11,8 +11,15 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   return (
-    <html suppressHydrationWarning lang="en">
+    <html suppressHydrationWarning lang="en" >
       {/*
         <head /> will contain the components returned by the nearest parent
         head.js. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
@@ -21,7 +28,7 @@ export default function RootLayout({
 
       <body className="dark:bg-black">
         <Providers>
-          <Header />
+          <Header scrollToSection={scrollToSection}  />
           {children}
           <Footer />
           <ScrollToTop />

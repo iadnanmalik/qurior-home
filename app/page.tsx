@@ -14,19 +14,27 @@ import { Inter } from "@next/font/google";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
+  // const scrollToSection = (sectionId: string) => {
+  //   const element = document.getElementById(sectionId);
+  //   if (element) {
+  //     element.scrollIntoView({ behavior: 'smooth' });
+  //   }
+  // };
   return (
     <>
       <ScrollUp />
-      <Hero />
+      <div id="home-section"> <Hero  /></div>
+     
       <Features />
       <Video />
-      <Brands />
+      <div id="services-section"><Brands /></div>
       <AboutSectionOne />
       <AboutSectionTwo />
       <Testimonials />
       <Pricing />
       <Blog />
-      <Contact />
+      <div id="contact-section"><Contact /></div>
+    
     </>
   );
 }
