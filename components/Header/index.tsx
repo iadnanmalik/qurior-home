@@ -53,20 +53,39 @@ const Header = ({ scrollToSection }: { scrollToSection: (sectionId: string) => v
                   sticky ? "py-5 lg:py-2" : "py-8"
                 } `}
               >
-                <Image
+                {/* <Image
                   src="/images/logo/logo-2.svg"
                   alt="logo"
                   width={140}
                   height={30}
                   className="w-full dark:hidden"
-                />
-                <Image
-                  src="/images/logo/logo.svg"
+                /> */}
+                    <div className="flex items-center">
+      <Image
+        src="/images/logo/logo-v1.png"
+        alt="logo"
+        width={35}
+        height={35}
+        className="hidden w-auto dark:block"
+      />
+      <span className="ml-2 mb-1 text-3xl font-bold leading-tight text-black dark:text-white sm:text-3xl sm:leading-tight md:text-3xl md:leading-tight">
+  Qurior
+</span>
+    </div>
+
+                {/* <Image
+                  src="/images/logo/logo-v1.png"
                   alt="logo"
-                  width={140}
-                  height={30}
-                  className="hidden w-full dark:block"
-                />
+                  width={40}
+                  height={40}
+                  className="hidden w-auto dark:block"
+                /> */}
+                {/* // div with text 'Qurior'  */}
+
+                
+
+
+
               </Link>
             </div>
             <div className="flex w-full items-center justify-between px-4">
