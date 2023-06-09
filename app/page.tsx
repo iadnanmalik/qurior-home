@@ -25,9 +25,9 @@ export default function Home() {
       <ScrollUp />
       <div id="home-section"> <Hero  /></div>
      
-      <Features />
-      <Video />
-      <div id="services-section"><Brands /></div>
+      <div id="services-section"><Features /></div>
+      {/* <Video /> */}
+      {/* <div id="services-section"><Brands /></div> */}
       <AboutSectionOne />
       <AboutSectionTwo />
       <Testimonials />
