@@ -7,6 +7,9 @@ dependencies:
   '@next/font':
     specifier: 13.1.6
     version: 13.1.6
+  emailjs:
+    specifier: ^4.0.2
+    version: 4.0.2(typescript@5.0.4)
   eslint:
     specifier: 8.33.0
     version: 8.33.0
@@ -2225,6 +2228,18 @@ packages:
       inherits: 2.0.4
       minimalistic-assert: 1.0.1
       minimalistic-crypto-utils: 1.0.1
+    dev: false
+
+  /emailjs@4.0.2(typescript@5.0.4):
+    resolution: {integrity: sha512-w/tldI93qO7uw9XzdwCCRR36OY/TYJxB81vEOmQkmxVDZOdrAnoQoOAvaMoDmmBUSoD1msyAIwBdKFWzC7lgKQ==}
+    engines: {node: '>=12'}
+    peerDependencies:
+      typescript: '>=4.3.5'
+    peerDependenciesMeta:
+      typescript:
+        optional: true
+    dependencies:
+      typescript: 5.0.4
     dev: false
 
   /emoji-regex@8.0.0:
