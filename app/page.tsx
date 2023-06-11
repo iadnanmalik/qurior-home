@@ -28,11 +28,11 @@ export default function Home() {
       <div id="services-section"><Features /></div>
       {/* <Video /> */}
       {/* <div id="services-section"><Brands /></div> */}
-      <AboutSectionOne />
-      <AboutSectionTwo />
+      <div id="work-section"> <AboutSectionOne /></div>
+      {/* <AboutSectionTwo /> */}
       <Testimonials />
-      <Pricing />
-      <Blog />
+      {/* <Pricing /> */}
+      {/* <Blog /> */}
       <div id="contact-section"><Contact /></div>
     
     </>

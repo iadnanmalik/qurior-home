@@ -66,7 +66,7 @@ const Header = ({ scrollToSection }: { scrollToSection: (sectionId: string) => v
         alt="logo"
         width={35}
         height={35}
-        className="hidden w-auto dark:block"
+        className="w-auto dark:block"
       />
       <span className="ml-2 mb-1 text-3xl font-bold leading-tight text-black dark:text-white sm:text-3xl sm:leading-tight md:text-3xl md:leading-tight">
   Qurior
