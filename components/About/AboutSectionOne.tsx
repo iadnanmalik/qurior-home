@@ -44,6 +44,8 @@ const AboutSectionOneItem = ({title, paragraph, stack, imgSrc, url}) =>{
 
                   <div className="w-full px-3 sm:w-1/2 lg:w-full xl:w-1/2">
                     <List text={stack[3]} />
+                    <List text={stack[4]} />
+                    <List text={stack[5]} />
                     {/* <List text="Pinecone" />
                     <List text="Hugging Face" /> */}
                   </div>
@@ -85,7 +87,7 @@ const AboutSectionOne = () => {
           {currentIndex === 0 && <AboutSectionOneItem 
                                       title="Law AI" 
                                       paragraph={"An AI-powered legal assistant designed to provide accurate answers and insights on a wide range of law-related queries. This advanced bot combines natural language processing with extensive legal knowledge"} 
-                                      stack={['TypeScript', 'Next.js', 'OpenAI', 'Firebase']}
+                                      stack={['TypeScript', 'Next.js', 'OpenAI', 'AWS EC2', 'Hugging Face', 'Firebase']}
                                       imgSrc={"/images/about/lawgpt.svg"}  url={'https://law.qurior.com/'}/>}
           {/* {currentIndex === 1 && <AboutSectionOneItem 
                                       title="Headasdllo" 
