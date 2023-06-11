@@ -12,8 +12,8 @@ type CarouselProps = {
 const Carousel = ({ currentIndex, setCurrentIndex }: CarouselProps) => {
 
   const items = [
-    { id: 1, title: "LawGPT" },
-    { id: 2, title: "LawGPT" },
+    { id: 1, title: "Law AI" },
+    // { id: 2, title: "LawGPT" },
   ];
 
   const goToSlide = (index: number) => {

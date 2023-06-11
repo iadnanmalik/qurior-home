@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import React, { useState } from "react";
+import Link from 'next/link';
 
 import SectionTitle from "../Common/SectionTitle";
 import Carousel from "./Carousel";
@@ -10,7 +11,7 @@ const checkIcon = (
   </svg>
 );
 
-const AboutSectionOneItem = ({title, paragraph}) =>{
+const AboutSectionOneItem = ({title, paragraph, stack, imgSrc, url}) =>{
   const List = ({ text }) => (
     <p className="mb-5 flex items-center text-lg font-medium text-body-color">
       <span className="mr-4 flex h-[30px] w-[30px] items-center justify-center rounded-md bg-primary bg-opacity-10 text-primary">
@@ -21,7 +22,8 @@ const AboutSectionOneItem = ({title, paragraph}) =>{
   );
 
   return (
-    <div className="-mx-4 flex flex-wrap items-center pb-16 md:pb-10 lg:pb-20">
+    <Link href={url} passHref target="_blank">
+    <div className="-mx-4 flex flex-wrap items-center pb-16 md:pb-10 lg:pb-20  hover:cursor-pointer">
             <div className="w-full px-4 lg:w-1/2">
               <SectionTitle
                 title={title}
@@ -35,15 +37,15 @@ const AboutSectionOneItem = ({title, paragraph}) =>{
               >
                 <div className="mx-[-12px] flex flex-wrap">
                   <div className="w-full px-3 sm:w-1/2 lg:w-full xl:w-1/2">
-                    <List text="Premium quality" />
-                    <List text="Tailwind CSS" />
-                    <List text="Use for lifetime" />
+                    <List text={stack[0]} />
+                    <List text={stack[1]}/>
+                    <List text={stack[2]} />
                   </div>
 
                   <div className="w-full px-3 sm:w-1/2 lg:w-full xl:w-1/2">
-                    <List text="Next.js" />
-                    <List text="Rich documentation" />
-                    <List text="Developer friendly" />
+                    <List text={stack[3]} />
+                    {/* <List text="Pinecone" />
+                    <List text="Hugging Face" /> */}
                   </div>
                 </div>
               </div>
@@ -55,7 +57,7 @@ const AboutSectionOneItem = ({title, paragraph}) =>{
                 data-wow-delay=".2s"
               >
                 <Image
-                  src="/images/about/about-image.svg"
+                  src={imgSrc}
                   alt="about-image"
                   fill
                   className="mx-auto max-w-full lg:mr-0"
@@ -63,6 +65,7 @@ const AboutSectionOneItem = ({title, paragraph}) =>{
               </div>
             </div>
           </div>
+          </Link>
   )
 }
 
@@ -71,11 +74,24 @@ const AboutSectionOne = () => {
 
  
   return (
-    <section id="about" className="pt-16 md:pt-20 lg:pt-28">
+    <section id="about" className="pt-16 md:pt-10 lg:pt-20">
       <div className="container">
+      <SectionTitle
+            title="Our Work"
+            paragraph=""
+            center
+          />
         <div className="border-b border-body-color/[.15] dark:border-white/[.15] ">
-          {currentIndex === 0 && <AboutSectionOneItem title="Hello" paragraph={"asdjadsjaskjd"} />}
-          {currentIndex === 1 && <AboutSectionOneItem title="Headasdllo" paragraph={"akjasdkjaskdjaksdjaksdjksjda"} />}
+          {currentIndex === 0 && <AboutSectionOneItem 
+                                      title="Law AI" 
+                                      paragraph={"An AI-powered legal assistant designed to provide accurate answers and insights on a wide range of law-related queries. This advanced bot combines natural language processing with extensive legal knowledge"} 
+                                      stack={['TypeScript', 'Next.js', 'OpenAI', 'Firebase']}
+                                      imgSrc={"/images/about/lawgpt.svg"}  url={'https://law.qurior.com/'}/>}
+          {/* {currentIndex === 1 && <AboutSectionOneItem 
+                                      title="Headasdllo" 
+                                      paragraph={"akjasdkjaskdjaksdjaksdjksjda"} 
+                                      stack={['TypeScript', 'Next.js', 'OpenAI', 'Firebase']}
+                                      imgSrc={"/images/about/lawgpt.png"}  />} */}
           <div className="mx-auto text-center mb-10"><Carousel currentIndex={currentIndex} setCurrentIndex={setCurrentIndex} /></div>
         </div>
        
