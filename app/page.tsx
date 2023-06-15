@@ -23,18 +23,18 @@ export default function Home() {
   return (
     <>
       <ScrollUp />
-      <div id="home-section"> <Hero  /></div>
-     
+      <div id="home-section"> <Hero /></div>
+
       <div id="services-section"><Features /></div>
       {/* <Video /> */}
       {/* <div id="services-section"><Brands /></div> */}
       <div id="work-section"> <AboutSectionOne /></div>
       {/* <AboutSectionTwo /> */}
-      <Testimonials />
+      {/* <Testimonials /> */}
       {/* <Pricing /> */}
       {/* <Blog /> */}
       <div id="contact-section"><Contact /></div>
-    
+
     </>
   );
 }

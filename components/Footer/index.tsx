@@ -33,8 +33,8 @@ const Footer = () => {
                 <p className="mb-9 text-base font-medium leading-relaxed text-body-color">
                   Email us at{" "} <a href="mailto:hello@qurior.com">info@qurior.com</a> 
                   <br />
-                  or call us at{" "}
-                  <a href="tel:+1-234-567-8900">+1-234-567-8900</a>
+                  {/* or call us at{" "}
+                  <a href="tel:+1-234-567-8900">+1-234-567-8900</a> */}
                 </p>
                 <div className="flex items-center">
                   {/* <a
