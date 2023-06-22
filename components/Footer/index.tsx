@@ -27,11 +27,10 @@ const Footer = () => {
                     width={40}
                     height={20}
                   />
-                  
-
                 </Link>
                 <p className="mb-9 text-base font-medium leading-relaxed text-body-color">
-                  Email us at{" "} <a href="mailto:hello@qurior.com">info@qurior.com</a> 
+                  Email us at{" "}
+                  <a href="mailto:hello@qurior.com">info@qurior.com</a>
                   <br />
                   {/* or call us at{" "}
                   <a href="tel:+1-234-567-8900">+1-234-567-8900</a> */}
@@ -139,7 +138,7 @@ const Footer = () => {
             <div className="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-2/12 xl:w-4/12">
               <div className="mb-12 lg:mb-16">
                 <h2 className="mb-10 text-xl font-bold text-black dark:text-white">
-                  Other ways to reach us
+                  Other Ways To Reach Us
                 </h2>
                 <ul>
                   <li>
@@ -172,7 +171,7 @@ const Footer = () => {
                 </ul>
               </div>
             </div>
-{/* 
+            {/* 
             <div className="w-full px-4 md:w-1/2 lg:w-4/12 xl:w-3/12">
               <div className="mb-12 lg:mb-16">
                 <h2 className="mb-10 text-xl font-bold text-black dark:text-white">

@@ -1,3 +1,4 @@
+"use client";
 import AboutSectionOne from "@/components/About/AboutSectionOne";
 import AboutSectionTwo from "@/components/About/AboutSectionTwo";
 import Blog from "@/components/Blog";
@@ -10,6 +11,7 @@ import Pricing from "@/components/Pricing";
 import Testimonials from "@/components/Testimonials";
 import Video from "@/components/Video";
 import { Inter } from "@next/font/google";
+import Script from "next/script";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,19 +24,43 @@ export default function Home() {
   // };
   return (
     <>
-      <ScrollUp />
-      <div id="home-section"> <Hero /></div>
+      <div className="container">
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-4HEDK8XNGJ"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){window.dataLayer.push(arguments);}
+          gtag('js', new Date());
 
-      <div id="services-section"><Features /></div>
+          gtag('config', 'G-4HEDK8XNGJ');
+        `}
+        </Script>
+      </div>
+      <ScrollUp />
+      <div id="home-section">
+        {" "}
+        <Hero />
+      </div>
+
+      <div id="services-section">
+        <Features />
+      </div>
       {/* <Video /> */}
       {/* <div id="services-section"><Brands /></div> */}
-      <div id="work-section"> <AboutSectionOne /></div>
+      <div id="work-section">
+        {" "}
+        <AboutSectionOne />
+      </div>
       {/* <AboutSectionTwo /> */}
       {/* <Testimonials /> */}
       {/* <Pricing /> */}
       {/* <Blog /> */}
-      <div id="contact-section"><Contact /></div>
-
+      <div id="contact-section">
+        <Contact />
+      </div>
     </>
   );
 }
